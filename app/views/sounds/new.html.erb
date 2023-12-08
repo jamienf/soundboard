@@ -1,0 +1,19 @@
+<h1>Add Sound</h1>
+
+<%= form_with(model: @sound, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :audio %>
+    <%= form.file_field :audio, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Add Sound', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', sounds_path, class: 'btn btn-secondary' %>
