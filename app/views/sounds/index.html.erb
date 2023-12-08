@@ -1,0 +1,20 @@
+<h1>Soundboard</h1>
+
+<%= link_to 'Add Sound', new_sound_path, class: 'btn btn-primary' %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Audio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sounds.each do |sound| %>
+      <tr>
+        <td><%= sound.name %></td>
+        <td><%= audio_tag sound.audio_url, controls: true %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
